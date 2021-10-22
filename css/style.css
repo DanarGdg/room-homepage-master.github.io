@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html{
+    font-family: 'Spartan', sans-serif;
+}
+
+header{
+    display: flex;
+    height: 70% ;
+}
+
+.image-hero-section{
+    width: 60%;
+    height: 100%;
+    background: url(../images/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5rem 4rem 0;
+}
+
+.logo{
+    margin-right: 3rem;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin: 0 1rem;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+nav ul li:hover{
+    border-bottom: solid white 2px;
+    padding-bottom: 0.5rem;
+}
+
+.hamburger-wrap{
+    display: none;
+}
+
+#chk{
+    position: absolute;
+    opacity: 0;
+}
+
+aside{
+    width: 40%;
+    padding: 15vh 6vw;
+    position: relative;
+}
+
+aside h1{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+aside p{
+    font-size: 0.8em;
+    color: hsl(0, 0%, 63%);
+    line-height: 1.6;
+    margin: 2rem 0;
+}
+
+aside h3{
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    cursor:pointer;
+}
+
+aside h3:hover{
+    color: hsl(0, 0%, 63%);
+}
+
+.img-slider{
+    width: 8rem;
+    height: 4rem;
+    display: flex;
+    position: absolute;
+}
+
+.img-slider div{
+    background-color: black;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.img-slider div:hover{
+    background-color: hsl(0, 0%, 50%);
+}
+
+.img-slider-dekstop{
+    bottom: 0;
+    left: 0;
+}
+
+.img-slider-mobile{
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+/* MAIN */
+main{
+    display: flex;
+    height: 30%;
+}
+
+.about{
+    padding: 7.5vh 2.5vw;
+    width: 60%;
+}
+
+.about h3{
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+}
+
+.about p{
+    font-size: 0.8em;
+    color: hsl(0, 0%, 63%);
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.img-about{
+    width: 40%;
+}
+
+.img-about img{
+    width: 100%;
+    height: 100%;
+}
+
+#copyright{
+    text-align: center;
+}
+
+@media all and (max-width : 1270px){
+    aside{
+        padding: 10vh 2.5vw;
+    }
+
+    .about{
+        padding: 4vh 2.5vw;
+    }
+
+}
+
+@media all and (max-width : 900px){
+    header{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .image-hero-section{
+        width: 100%;
+        background:url(../images/mobile-image-hero-1.jpg) no-repeat contain;
+        box-shadow: 0px 200px 243px -196px rgba(0,0,0,1) inset;
+        -webkit-box-shadow: 0px 200px 243px -196px rgba(0,0,0,1) inset;
+        -moz-box-shadow: 0px 200px 243px -196px rgba(0,0,0,1) inset;
+    }
+
+    nav{
+        display: flex;
+        width: 100%;
+        padding: 0 1rem;
+        height: 15vh;
+    }
+
+    .logo{
+        order: 2;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul{
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        width: 100%;
+        height: 15vh;
+        background-color: white;
+        left: 0;
+        color: black;
+        transform: translateX(-100%);
+        transition: transform 0.2s;
+        z-index: 1;
+    }
+
+    #hamburger{
+        position: relative;
+        z-index: 2;
+    }
+
+    nav ul.slide{
+        transform: translateX(0);
+    }
+
+    .hamburger-wrap{
+        display: unset;
+    }
+
+    aside{
+        width: 100%;
+        padding: 7.5vh 5vw;
+    }
+
+    aside h1{
+        font-size: 2em;
+    }
+
+    .img-slider-dekstop{
+        display: none;
+    }
+
+    .img-slider-mobile{
+        display: flex;
+    }
+
+    /* MAIN */
+    main{
+        flex-direction: column;
+    }
+
+    .about, .img-about{
+        width: 100%;
+    }
+
+}
